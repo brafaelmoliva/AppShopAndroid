@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Tema principal de tu app -->
+
+
+
+    <style name="Theme.Appshop" parent="android:Theme.Material.Light.NoActionBar" />
+
+    <!-- Tema para el SplashScreen automático -->
+    <style name="Theme.Appshop.Splash" parent="Theme.SplashScreen">
+        <!-- Fondo del splash screen -->
+        <item name="windowSplashScreenBackground">#FF2FAA7A</item>
+
+        <!-- Logo vectorial en drawable -->
+        <item name="windowSplashScreenAnimatedIcon">@drawable/applogo</item>
+
+        <!-- Tema que se aplicará después del splash -->
+        <item name="postSplashScreenTheme">@style/Theme.Appshop</item>
+    </style>
+
+</resources>
