@@ -15,6 +15,8 @@ class LocalesViewModel : ViewModel() {
     init {
         viewModelScope.launch {
             try {
+                // Llama a la api
+
                 val response = RetrofitClient.apiService.getLocales()
                 _locales.value = response
             } catch (e: Exception) {

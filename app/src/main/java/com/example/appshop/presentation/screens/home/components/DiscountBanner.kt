@@ -88,6 +88,7 @@ fun DiscountCarousel(navController: NavController) {
             Box(modifier = Modifier.clickable {
                 when (title) {
                     "¡Encuentranos!" -> navController.navigate(Routes.LocalList)
+                    "Sucursales famosas" -> navController.navigate(Routes.SucursalesFamosas)
                     // Puedes agregar más aquí si quieres
                 }
             }) {

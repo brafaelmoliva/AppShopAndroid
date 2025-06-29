@@ -19,12 +19,14 @@ import androidx.compose.ui.graphics.Color
 
 @Composable
 fun LocalMapScreen(navController: NavController, localId: Int?) {
-    val viewModel: LocalesViewModel = viewModel()
+  //uso el view model para obtener los datos de la api
+   val viewModel: LocalesViewModel = viewModel()
     val local = viewModel.locales.collectAsState().value.find { it.id == localId }
 
     local?.let { item ->
         val cameraPositionState = rememberCameraPositionState {
             position = com.google.android.gms.maps.model.CameraPosition.fromLatLngZoom(
+               //aqui accedo a los datos
                 LatLng(item.latitud, item.longitud),
                 16f
             )
@@ -35,6 +37,7 @@ fun LocalMapScreen(navController: NavController, localId: Int?) {
             cameraPositionState = cameraPositionState
         ) {
             Circle(
+                // aqui los uso
                 center = LatLng(item.latitud, item.longitud),
                 radius = 100.0,
                 fillColor = Color(0x5532CD32),

@@ -16,7 +16,8 @@ import com.example.appshop.presentation.screens.login.LoginScreen
 
 import com.example.appshop.presentation.screens.onboarding.OnboardingScreen
 import com.example.appshop.presentation.screens.register.RegisterScreen
-
+import com.example.appshop.presentation.screens.ventas.SucursalesFamosasScreen
+import com.example.appshop.presentation.screens.ventas.VentasChartScreen
 
 
 @Composable
@@ -53,6 +54,20 @@ fun AppNavGraph(navController: NavHostController) {
             val id = backStackEntry.arguments?.getString("id")?.toIntOrNull()
             LocalDetailScreen(id)
         }
+
+        composable(Routes.SucursalesFamosas) {
+            SucursalesFamosasScreen(navController = navController)
+        }
+
+
+        composable(Routes.SucursalesFamosas) {
+            SucursalesFamosasScreen(navController = navController) // ✅
+        }
+
+        composable(Routes.VentasChart) {
+            VentasChartScreen()
+        }
+
 
 
 

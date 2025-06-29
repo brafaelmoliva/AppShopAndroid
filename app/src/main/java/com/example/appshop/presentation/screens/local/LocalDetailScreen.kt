@@ -16,6 +16,9 @@ import androidx.compose.ui.text.font.FontWeight
 
 @Composable
 fun LocalDetailScreen(localId: Int?) {
+
+    //uso el view model para acceder a los datos y buscar
+    //el local con el id recibido
     val viewModel: LocalesViewModel = viewModel()
     val local = viewModel.locales.collectAsState().value.find { it.id == localId }
 
@@ -47,8 +50,8 @@ fun LocalDetailScreen(localId: Int?) {
                 contentDescription = null,
                 modifier = Modifier
                     .fillMaxWidth()
-                    .heightIn(min = 200.dp, max = 400.dp), // ajusta altura sin recorte forzado
-                contentScale = ContentScale.Fit // muestra la imagen completa sin cortar
+                    .heightIn(min = 200.dp, max = 400.dp),
+                contentScale = ContentScale.Fit
             )
 
             Button(

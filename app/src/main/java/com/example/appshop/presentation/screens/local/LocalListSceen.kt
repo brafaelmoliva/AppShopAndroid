@@ -31,7 +31,7 @@ fun LocalListScreen(navController: NavController, viewModel: LocalesViewModel = 
     LazyColumn(
         modifier = Modifier
             .fillMaxSize()
-            .background(color = Color(0xFFF6F6F6)) // fondo suave
+            .background(color = Color(0xFFF6F6F6))
             .padding(vertical = 8.dp)
     ) {
         items(locales) { local ->

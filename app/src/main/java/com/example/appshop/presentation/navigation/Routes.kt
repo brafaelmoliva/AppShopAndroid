@@ -12,6 +12,8 @@ object Routes {
     const val LocalMap = "local_map"
     const val LocalDetail = "local_detail"
 
+    const val SucursalesFamosas = "sucursales_famosas"
+    const val VentasChart = "ventas_chart"
 
 
 
